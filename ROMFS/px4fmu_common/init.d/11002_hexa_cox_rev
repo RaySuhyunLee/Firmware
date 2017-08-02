@@ -1,0 +1,27 @@
+#!nsh
+#
+# @name Reversed Prop(CCW top) 
+#
+# @type Hexarotor Coaxial
+# @class Copter
+#
+# @output MAIN1 front right top, CCW; angle:60; direction:CCW
+# @output MAIN2 front right bottom, CW; angle:60; direction:CW
+# @output MAIN3 back top, CCW; angle:180; direction:CCW
+# @output MAIN4 back bottom, CW; angle:180; direction:CW
+# @output MAIN5 front left top, CCW; angle:-60; direction:CCW
+# @output MAIN6 front left bottom, CW;angle:-60; direction:CW
+#
+# @output AUX1 feed-through of RC AUX1 channel
+# @output AUX2 feed-through of RC AUX2 channel
+# @output AUX3 feed-through of RC AUX3 channel
+#
+# @maintainer Ray Suhyun Lee <raysuhyunlee@gmail.com>
+#
+
+sh /etc/init.d/rc.mc_defaults
+
+set MIXER hexa_cox_rev
+
+# Need to set all 8 channels
+set PWM_OUT 12345678
